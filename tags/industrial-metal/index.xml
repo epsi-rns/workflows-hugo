@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>industrial metal on Your mission. Good Luck!</title>
+    <link>http://example/tags/industrial-metal/</link>
+    <description>Recent content in industrial metal on Your mission. Good Luck!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jul 2019 07:35:05 +0700</lastBuildDate>
+    
+	<atom:link href="http://example/tags/industrial-metal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>White Zombie - More Human Than Human</title>
+      <link>http://example/lyrics/2019/07/15/white-zombie-more-human-than-human/</link>
+      <pubDate>Mon, 15 Jul 2019 07:35:05 +0700</pubDate>
+      
+      <guid>http://example/lyrics/2019/07/15/white-zombie-more-human-than-human/</guid>
+      <description>&lt;p&gt;Yeah I am the nexus one I want more life&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Marilyn Manson - Redeemer</title>
+      <link>http://example/lyrics/2015/07/25/marilyn-manson-redeemer/</link>
+      <pubDate>Sat, 25 Jul 2015 07:35:05 +0700</pubDate>
+      
+      <guid>http://example/lyrics/2015/07/25/marilyn-manson-redeemer/</guid>
+      <description>&lt;p&gt;Nothing seems exciting, always the same hiding
+It&#39;s haunting me&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Marilyn Manson - Sweet Dreams</title>
+      <link>http://example/lyrics/2015/07/15/eurythmics-sweat-dreams/</link>
+      <pubDate>Wed, 15 Jul 2015 07:35:05 +0700</pubDate>
+      
+      <guid>http://example/lyrics/2015/07/15/eurythmics-sweat-dreams/</guid>
+      <description>&lt;p&gt;Sweet dreams are made of this&lt;br&gt;
+Who am I to disagree?&lt;/p&gt;
+&lt;p&gt;Travel the world and the seven seas&lt;br&gt;
+Everybody&#39;s looking for something&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

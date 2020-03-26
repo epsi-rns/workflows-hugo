@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Your mission. Good Luck!</title>
+    <link>http://example/tags/</link>
+    <description>Recent content in Tags on Your mission. Good Luck!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Feb 2020 07:35:05 +0700</lastBuildDate>
+    
+	<atom:link href="http://example/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2010s</title>
+      <link>http://example/tags/2010s/</link>
+      <pubDate>Sun, 23 Feb 2020 07:35:05 +0700</pubDate>
+      
+      <guid>http://example/tags/2010s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metal</title>
+      <link>http://example/tags/metal/</link>
+      <pubDate>Sun, 23 Feb 2020 07:35:05 +0700</pubDate>
+      
+      <guid>http://example/tags/metal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>90s</title>
+      <link>http://example/tags/90s/</link>
+      <pubDate>Mon, 15 Jul 2019 07:35:05 +0700</pubDate>
+      
+      <guid>http://example/tags/90s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>industrial metal</title>
+      <link>http://example/tags/industrial-metal/</link>
+      <pubDate>Mon, 15 Jul 2019 07:35:05 +0700</pubDate>
+      
+      <guid>http://example/tags/industrial-metal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>2000s</title>
+      <link>http://example/tags/2000s/</link>
+      <pubDate>Thu, 13 Sep 2018 07:35:05 +0700</pubDate>
+      
+      <guid>http://example/tags/2000s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nu metal</title>
+      <link>http://example/tags/nu-metal/</link>
+      <pubDate>Thu, 13 Sep 2018 07:35:05 +0700</pubDate>
+      
+      <guid>http://example/tags/nu-metal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hip hop</title>
+      <link>http://example/tags/hip-hop/</link>
+      <pubDate>Mon, 15 Jan 2018 07:35:05 +0700</pubDate>
+      
+      <guid>http://example/tags/hip-hop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>story</title>
+      <link>http://example/tags/story/</link>
+      <pubDate>Sat, 03 Oct 2015 08:08:15 +0700</pubDate>
+      
+      <guid>http://example/tags/story/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>subtitle</title>
+      <link>http://example/tags/subtitle/</link>
+      <pubDate>Sat, 03 Oct 2015 08:08:15 +0700</pubDate>
+      
+      <guid>http://example/tags/subtitle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>alternative metal</title>
+      <link>http://example/tags/alternative-metal/</link>
+      <pubDate>Sat, 15 Mar 2014 07:35:05 +0700</pubDate>
+      
+      <guid>http://example/tags/alternative-metal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>agent</title>
+      <link>http://example/tags/agent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example/tags/agent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>command</title>
+      <link>http://example/tags/command/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example/tags/command/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>duty</title>
+      <link>http://example/tags/duty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example/tags/duty/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2010s on Your mission. Good Luck!</title>
+    <link>http://example/tags/2010s/</link>
+    <description>Recent content in 2010s on Your mission. Good Luck!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Feb 2020 07:35:05 +0700</lastBuildDate>
+    
+	<atom:link href="http://example/tags/2010s/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>5FDP - Wash It All The Way</title>
+      <link>http://example/lyrics/2020/02/23/5fdp-wash-it-all-the-way/</link>
+      <pubDate>Sun, 23 Feb 2020 07:35:05 +0700</pubDate>
+      
+      <guid>http://example/lyrics/2020/02/23/5fdp-wash-it-all-the-way/</guid>
+      <description>&lt;p&gt;I&#39;m wasting here&lt;br&gt;
+Can anyone&lt;br&gt;
+Wash it all away?&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
