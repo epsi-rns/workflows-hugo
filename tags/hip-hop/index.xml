@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hip hop on Your mission. Good Luck!</title>
-    <link>http://example/tags/hip-hop/</link>
+    <link>/workflows-hugo/tags/hip-hop/</link>
     <description>Recent content in hip hop on Your mission. Good Luck!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Jan 2018 07:35:05 +0700</lastBuildDate>
     
-	<atom:link href="http://example/tags/hip-hop/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/workflows-hugo/tags/hip-hop/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>House of Pain - Jump Around</title>
-      <link>http://example/lyrics/2018/01/15/house-of-pain-jump-around/</link>
+      <link>/workflows-hugo/lyrics/2018/01/15/house-of-pain-jump-around/</link>
       <pubDate>Mon, 15 Jan 2018 07:35:05 +0700</pubDate>
       
-      <guid>http://example/lyrics/2018/01/15/house-of-pain-jump-around/</guid>
+      <guid>/workflows-hugo/lyrics/2018/01/15/house-of-pain-jump-around/</guid>
       <description>&lt;p&gt;Pack it up, pack it in, let me begin&lt;br&gt;
 I came to win, battle me that&#39;s a sin&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Onyx - Slam</title>
-      <link>http://example/lyrics/2015/05/15/onyx-slam/</link>
+      <link>/workflows-hugo/lyrics/2015/05/15/onyx-slam/</link>
       <pubDate>Fri, 15 May 2015 07:35:05 +0700</pubDate>
       
-      <guid>http://example/lyrics/2015/05/15/onyx-slam/</guid>
+      <guid>/workflows-hugo/lyrics/2015/05/15/onyx-slam/</guid>
       <description>&lt;p&gt;Let the boys be boys&lt;br&gt;
 Make noise b-boys&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Public Enemy - Bring The Noise</title>
-      <link>http://example/lyrics/2014/01/15/public-enemy-bring-the-noise/</link>
+      <link>/workflows-hugo/lyrics/2014/01/15/public-enemy-bring-the-noise/</link>
       <pubDate>Wed, 15 Jan 2014 07:35:05 +0700</pubDate>
       
-      <guid>http://example/lyrics/2014/01/15/public-enemy-bring-the-noise/</guid>
+      <guid>/workflows-hugo/lyrics/2014/01/15/public-enemy-bring-the-noise/</guid>
       <description>&lt;p&gt;Bass! How low can you go?&lt;br&gt;
 Death row, what a brother knows&lt;br&gt;
 Once again, back is the incredible&lt;/p&gt;</description>

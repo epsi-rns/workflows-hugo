@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>alternative metal on Your mission. Good Luck!</title>
-    <link>http://example/tags/alternative-metal/</link>
+    <link>/workflows-hugo/tags/alternative-metal/</link>
     <description>Recent content in alternative metal on Your mission. Good Luck!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 15 Mar 2014 07:35:05 +0700</lastBuildDate>
     
-	<atom:link href="http://example/tags/alternative-metal/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/workflows-hugo/tags/alternative-metal/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Soundgarden - Black Hole Sun</title>
-      <link>http://example/lyrics/2014/03/15/soundgarden-black-hole-sun/</link>
+      <link>/workflows-hugo/lyrics/2014/03/15/soundgarden-black-hole-sun/</link>
       <pubDate>Sat, 15 Mar 2014 07:35:05 +0700</pubDate>
       
-      <guid>http://example/lyrics/2014/03/15/soundgarden-black-hole-sun/</guid>
+      <guid>/workflows-hugo/lyrics/2014/03/15/soundgarden-black-hole-sun/</guid>
       <description>&lt;p&gt;In my eyes, indisposed&lt;br&gt;
 In disguises no one knows&lt;/p&gt;</description>
     </item>

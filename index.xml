@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web Development Blog on Your mission. Good Luck!</title>
-    <link>http://example/</link>
+    <link>/workflows-hugo/</link>
     <description>Recent content in Web Development Blog on Your mission. Good Luck!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Feb 2020 07:35:05 +0700</lastBuildDate>
     
-        <atom:link href="http://example/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/workflows-hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     

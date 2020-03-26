@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog List on Your mission. Good Luck!</title>
-    <link>http://example/pages/</link>
+    <link>/workflows-hugo/pages/</link>
     <description>Recent content in Blog List on Your mission. Good Luck!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://example/pages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/workflows-hugo/pages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About Rescue Mission</title>
-      <link>http://example/pages/about/</link>
+      <link>/workflows-hugo/pages/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example/pages/about/</guid>
+      <guid>/workflows-hugo/pages/about/</guid>
       <description>This was not a rescue mission!
 Social Accounts    @cahgentoo   +epsinurwijayadi   nurwijayadi   epsi-rns   epsi-rns   epsi     Let me put to you like this. If the secretary wanted me out of there, then things are really bad out here</description>
     </item>
     
     <item>
       <title>Archives by Date</title>
-      <link>http://example/pages/archives/</link>
+      <link>/workflows-hugo/pages/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example/pages/archives/</guid>
+      <guid>/workflows-hugo/pages/archives/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Search Blog</title>
-      <link>http://example/pages/search/</link>
+      <link>/workflows-hugo/pages/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example/pages/search/</guid>
+      <guid>/workflows-hugo/pages/search/</guid>
       <description></description>
     </item>
     

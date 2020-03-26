@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2000s on Your mission. Good Luck!</title>
-    <link>http://example/tags/2000s/</link>
+    <link>/workflows-hugo/tags/2000s/</link>
     <description>Recent content in 2000s on Your mission. Good Luck!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Sep 2018 07:35:05 +0700</lastBuildDate>
     
-	<atom:link href="http://example/tags/2000s/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/workflows-hugo/tags/2000s/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Disturbed - Stupify</title>
-      <link>http://example/lyrics/2018/09/13/disturbed-stupify/</link>
+      <link>/workflows-hugo/lyrics/2018/09/13/disturbed-stupify/</link>
       <pubDate>Thu, 13 Sep 2018 07:35:05 +0700</pubDate>
       
-      <guid>http://example/lyrics/2018/09/13/disturbed-stupify/</guid>
+      <guid>/workflows-hugo/lyrics/2018/09/13/disturbed-stupify/</guid>
       <description>&lt;p&gt;Look in my face, stare in my soul&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Soulfly - Jump Da Fuck Up</title>
-      <link>http://example/lyrics/2018/09/07/soulfly-jump-da-fuck-up/</link>
+      <link>/workflows-hugo/lyrics/2018/09/07/soulfly-jump-da-fuck-up/</link>
       <pubDate>Fri, 07 Sep 2018 07:35:05 +0700</pubDate>
       
-      <guid>http://example/lyrics/2018/09/07/soulfly-jump-da-fuck-up/</guid>
+      <guid>/workflows-hugo/lyrics/2018/09/07/soulfly-jump-da-fuck-up/</guid>
       <description>&lt;p&gt;You seem to sever all my frequencies&lt;br&gt;
 I&#39;m tethered to your energies&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Soundgarden - Black Hole Sun</title>
-      <link>http://example/lyrics/2014/03/15/soundgarden-black-hole-sun/</link>
+      <link>/workflows-hugo/lyrics/2014/03/15/soundgarden-black-hole-sun/</link>
       <pubDate>Sat, 15 Mar 2014 07:35:05 +0700</pubDate>
       
-      <guid>http://example/lyrics/2014/03/15/soundgarden-black-hole-sun/</guid>
+      <guid>/workflows-hugo/lyrics/2014/03/15/soundgarden-black-hole-sun/</guid>
       <description>&lt;p&gt;In my eyes, indisposed&lt;br&gt;
 In disguises no one knows&lt;/p&gt;</description>
     </item>

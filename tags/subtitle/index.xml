@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>subtitle on Your mission. Good Luck!</title>
-    <link>http://example/tags/subtitle/</link>
+    <link>/workflows-hugo/tags/subtitle/</link>
     <description>Recent content in subtitle on Your mission. Good Luck!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 03 Oct 2015 08:08:15 +0700</lastBuildDate>
     
-	<atom:link href="http://example/tags/subtitle/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/workflows-hugo/tags/subtitle/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Every Day</title>
-      <link>http://example/quotes/2015/10/03/every-day/</link>
+      <link>/workflows-hugo/quotes/2015/10/03/every-day/</link>
       <pubDate>Sat, 03 Oct 2015 08:08:15 +0700</pubDate>
       
-      <guid>http://example/quotes/2015/10/03/every-day/</guid>
+      <guid>/workflows-hugo/quotes/2015/10/03/every-day/</guid>
       <description>&lt;p&gt;I&#39;ve been thinking about this
 over and over and over.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Jerry Maguire</title>
-      <link>http://example/quotes/2015/01/01/jerry-maguire/</link>
+      <link>/workflows-hugo/quotes/2015/01/01/jerry-maguire/</link>
       <pubDate>Thu, 01 Jan 2015 17:35:15 +0700</pubDate>
       
-      <guid>http://example/quotes/2015/01/01/jerry-maguire/</guid>
+      <guid>/workflows-hugo/quotes/2015/01/01/jerry-maguire/</guid>
       <description>&lt;p&gt;You had me at Hello.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Scott Pilgrim vs The World</title>
-      <link>http://example/quotes/2015/01/01/scott-pigrim-vs-the-world/</link>
+      <link>/workflows-hugo/quotes/2015/01/01/scott-pigrim-vs-the-world/</link>
       <pubDate>Thu, 01 Jan 2015 17:35:15 +0700</pubDate>
       
-      <guid>http://example/quotes/2015/01/01/scott-pigrim-vs-the-world/</guid>
+      <guid>/workflows-hugo/quotes/2015/01/01/scott-pigrim-vs-the-world/</guid>
       <description>&lt;p&gt;Did you know that the original name for Pac-Man was Puck-Man?&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Fight Club</title>
-      <link>http://example/quotes/2015/01/01/fight-club/</link>
+      <link>/workflows-hugo/quotes/2015/01/01/fight-club/</link>
       <pubDate>Thu, 01 Jan 2015 13:08:15 +0700</pubDate>
       
-      <guid>http://example/quotes/2015/01/01/fight-club/</guid>
+      <guid>/workflows-hugo/quotes/2015/01/01/fight-club/</guid>
       <description>&lt;p&gt;You are &lt;strong&gt;not&lt;/strong&gt; special.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Dead Poet Society</title>
-      <link>http://example/quotes/2015/01/01/dead-poets-society/</link>
+      <link>/workflows-hugo/quotes/2015/01/01/dead-poets-society/</link>
       <pubDate>Thu, 01 Jan 2015 11:08:15 +0700</pubDate>
       
-      <guid>http://example/quotes/2015/01/01/dead-poets-society/</guid>
+      <guid>/workflows-hugo/quotes/2015/01/01/dead-poets-society/</guid>
       <description>&lt;p&gt;So avoid using the word &lt;strong&gt;very&lt;/strong&gt; because it&#39;s lazy.&lt;/p&gt;</description>
     </item>
     

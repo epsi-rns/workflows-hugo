@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>command on Your mission. Good Luck!</title>
-    <link>http://example/tags/command/</link>
+    <link>/workflows-hugo/tags/command/</link>
     <description>Recent content in command on Your mission. Good Luck!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://example/tags/command/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/workflows-hugo/tags/command/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hello There</title>
-      <link>http://example/letters/hello/</link>
+      <link>/workflows-hugo/letters/hello/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example/letters/hello/</guid>
+      <guid>/workflows-hugo/letters/hello/</guid>
       <description>Desperate times, desperate measures.
 I can&#39;t protect you, that&#39;s why I need you to leave.</description>
     </item>
