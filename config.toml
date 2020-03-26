@@ -1,6 +1,7 @@
 # An example of Hugo site using Bulma for personal learning purpose.
 
-baseURL      = "http://example/"
+# baseURL      = "http://example/"
+baseURL      = "/workflows-hugo"
 languageCode = "en-us"
 title        = "Your mission. Good Luck!"
 theme        = "tutor-06"
