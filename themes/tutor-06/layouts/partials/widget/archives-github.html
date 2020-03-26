@@ -1,0 +1,19 @@
+<section class="aside-wrapper yellow">
+  <div class="widget white z-depth-3 hoverable">
+    <div class="widget-header yellow lighten-4">
+
+      <strong>Linux/BSD Customization</strong>
+      <i class="material-icons right">face</i>
+
+    </div>
+    <div class="widget-body">
+
+      <ul class="widget-list">
+        {{ range first 5 (shuffle .Site.Data.archives_github) }}
+        <li><a href="http://epsi-rns.github.io{{ .url }}">{{ .title }}</a></li>
+        {{ end }}
+      </ul>
+
+    </div>
+  </div>
+</section>

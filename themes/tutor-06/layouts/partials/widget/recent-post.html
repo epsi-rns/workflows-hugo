@@ -1,0 +1,20 @@
+<section class="aside-wrapper lime">
+  <div class="widget white z-depth-3 hoverable">
+    <div class="widget-header lime lighten-4">
+
+      <strong>Recent Post</strong>
+      <i class="material-icons right">av_timer</i>
+
+    </div>
+    <div class="widget-body">
+
+      <ul class="widget-list">
+        {{ range first 5 (where .Site.Pages "Type" "post") }}
+        <li><a href="{{ .URL | absURL }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+
+    </div>
+  </div>
+</section>
+

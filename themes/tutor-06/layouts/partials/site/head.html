@@ -1,0 +1,18 @@
+<head>
+  {{ partial "meta/html.html" . }}
+  <title>{{ .Page.Title | default .Site.Title }}</title>
+
+  <!-- Stylesheet -->
+  <link type="text/css" rel="stylesheet" media="screen,projection"
+        href="{{ "css/materialize.css" | relURL }}">
+  <link type="text/css" rel="stylesheet"
+        href="{{ "css/main.css" | relURL }}">
+  {{ block "custom-stylesheet" . }}{{ end }}
+
+  <link rel="shortcut icon" type="image/x-icon"
+        href="{{ "favicon.ico" | relURL }}" />
+
+  {{ partial "meta/seo.html" . }}
+  {{ partial "meta/opengraph.html" . }}
+  {{ partial "meta/twitter.html" . }}
+</head>

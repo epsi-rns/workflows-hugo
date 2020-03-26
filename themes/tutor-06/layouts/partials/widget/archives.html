@@ -1,0 +1,54 @@
+<section class="aside-wrapper green">
+  <div class="widget white z-depth-3 hoverable">
+    <div class="widget-header green lighten-4">
+
+      <strong>Archives</strong>
+      <i class="material-icons right">next_week</i>
+
+    </div>
+    <div class="widget-body">
+
+      {{ $posts := where .Site.Pages "Type" "post" }}
+      {{ $page_year   := .Page.Date.Format "2006" }}
+      {{ $page_month  := .Page.Date.Format "January" }}
+    
+      {{ range ($posts.GroupByDate "2006") }}  
+        {{ $year := .Key }}
+          <div class ="archive-year p-t-5" id="{{ $year }}">
+            <a href="{{ "pages/archives" | absURL }}#{{ $year }}">
+            {{ $year }}</a>
+          </div>
+
+        {{ if eq $year $page_year }}
+          <ul class="widget-archive m-t-0">
+          {{ range (.Pages.GroupByDate "January") }}
+          {{ $month := .Key }}
+          <li class="list-month">
+
+            <span id="{{ $year }}-{{ $month }}">
+                  <a href="{{ "pages/archives" | absURL }}#{{ $year }}-{{ $month }}">
+                  {{ $month }}</a> - {{ $year }}</span>
+
+            {{ if eq $month $page_month }}
+              <ul class="widget-list">
+              {{ range $post_month := .Pages }}
+
+              <li>
+                <a href="{{ $post_month.URL | absURL }}">
+                  {{ $post_month.Title }}
+                </a>
+              </li>
+              {{ end }}
+              </ul>
+            {{ end }}
+
+          </li>
+          {{ end }}
+          </ul>
+        {{ end }}
+
+      {{ end }}
+
+    </div>
+  </div>
+</section>

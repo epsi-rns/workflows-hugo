@@ -1,0 +1,29 @@
+{{ if .Params.related_link_ids }}
+<section class="aside-wrapper light-green">
+  <div class="widget white z-depth-3 hoverable">
+    <div class="widget-header light-green lighten-4">
+
+      <strong>Related Posts</strong>
+      <i class="material-icons right">link</i>
+
+    </div>
+    <div class="widget-body">
+
+      <ul class="widget-list">
+        {{ range $cur := .Params.related_link_ids }}
+        <li>   
+          {{ range $.Site.Data.archives }}
+
+            {{- if eq $cur (print .id) -}}
+            <a href="{{ .url | absURL }}">{{ .title }}</a>
+            {{- end -}}
+
+          {{ end }}
+        </li>
+      {{ end }}
+      </ul>
+
+    </div>
+  </div>
+</section>
+{{ end }}

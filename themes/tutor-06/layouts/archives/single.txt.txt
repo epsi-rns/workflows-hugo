@@ -1,0 +1,13 @@
+{{- define "main" -}}
+# Helper for related links
+# {{ .Title }}
+
+{{ range (where .Site.Pages "Type" "post") }}
+  {{- if .Date }}
+- id: {{ .Date.Format "06010204" }}
+  title: "{{ .Title }}"
+  url: {{ .URL }}
+  {{ end -}}
+{{ end }}
+
+{{- end -}}

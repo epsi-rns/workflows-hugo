@@ -1,0 +1,14 @@
+{{ define "main" }}
+{{ $color := "blue-grey" }}
+  <main role="main" class="col s12 m12">
+    <section class="main-wrapper {{ $color }}">
+      <div class="blog white z-depth-3 hoverable">
+
+        <article class="blog-body" itemprop="articleBody">
+          {{ .Content }}
+        </article>
+
+      </div>
+    </section>
+  </main>
+{{ end }}

@@ -1,0 +1,27 @@
+{{ define "main" }}
+  {{ $color := "indigo" }}
+  <main role="main" class="col s12 m8">
+    <section class="main-wrapper {{ $color }}">
+      <div class="blog white z-depth-3 hoverable">
+
+        <section class="blog-header {{ $color }} lighten-5">
+          <div class="main_title"> 
+            <h4 class="blog-post-title" itemprop="name headline">
+              <a href="#">{{ .Title | default .Site.Title }}</a></h4>
+          </div>
+        </section>
+
+        <article class="blog-body" itemprop="articleBody">
+          {{ .Content }}
+        </article>
+
+      </div>
+    </section>
+  </main>
+{{ end }}
+
+{{ define "aside" }}
+  <aside class="col s12 m4">
+    {{ partial "widget/recent-post.html" . }}
+  </aside>
+{{ end }}

@@ -1,0 +1,24 @@
+<section class="aside-wrapper deep-purple">
+  <div class="widget white z-depth-3 hoverable">
+    <div class="widget-header deep-purple lighten-4">
+
+      <strong>Tags</strong>
+      <i class="material-icons right">local_offer</i>
+
+    </div>
+    <div class="widget-body">
+
+      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        {{ $path := $name | urlize }}
+        <a href="{{ printf "tags/%s" $path | absURL }}">
+        <span class="new deep-purple badge z-depth-1 hoverable m-b-5"
+              data-badge-caption="{{ $name }}"></span>
+        </a>
+      {{ end }}
+
+      <div class="clearfix"></div>
+
+    </div>
+  </div>
+</section>
+

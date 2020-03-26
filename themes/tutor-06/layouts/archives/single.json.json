@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{- $posts := where .Site.Pages "Type" "post" -}}
+{{- $postCount := len $posts -}}
+{
+  {{ range $i, $e := $posts }}
+    "{{ .URL | urlize }}": {
+      "title": {{ jsonify $e.Title }},
+      "content": {{ jsonify ($e.Params.excerpt | default $e.Summary) }},
+      "url": {{ jsonify .Permalink }},
+      "author": {{ jsonify $e.Params.author }},
+      "category": {{ jsonify $e.Section  }}
+    }
+    {{- if not (eq (add $i 1) $postCount) }},{{ end -}}
+  {{ end }}
+}
+{{ end }}

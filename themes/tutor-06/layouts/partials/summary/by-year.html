@@ -1,0 +1,39 @@
+  {{ $color := .Color }}
+
+  <div class="col s12 m6 l4">
+    <div class="widget white z-depth-1 hoverable m-5">
+      <div class="widget-header {{ $color }} lighten-4">
+
+        <i class="material-icons left">folder_open</i>
+        <div class ="anchor-target archive-year" 
+             id="{{ .Key }}"><strong>{{ .Key }}</strong></div>
+        <div class="clearfix"></div>
+
+      </div>
+      <div class="widget-body">
+
+        <div class="archive-list">
+          {{ range .Pages }}
+            <div class="archive-item">
+              <div class="left"><a href="{{ .URL | absURL }}">
+                {{ .Title }}
+              </a></div>
+              <div class="right right-align"><time>
+                  {{ .Date.Format "02 Jan" }}
+                  <i class="material-icons right">access_time</i>
+              </time></div>
+              <div class="clearfix"></div>
+            </div>
+          {{ end }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+ 
+
+
+
+
+

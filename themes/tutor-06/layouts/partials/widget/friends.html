@@ -1,0 +1,19 @@
+<section class="aside-wrapper purple">
+  <div class="widget white z-depth-3 hoverable">
+    <div class="widget-header purple lighten-4">
+
+      <strong>Isle of Friends</strong>
+      <i class="material-icons right">face</i>
+
+    </div>
+    <div class="widget-body">
+
+      <ul class="widget-list">
+        {{ range first 5 (shuffle .Site.Data.friends) }}
+        <li><a href="{{ .url }}">{{ .title }}</a></li>
+        {{ end }}
+      </ul>
+
+    </div>
+  </div>
+</section>

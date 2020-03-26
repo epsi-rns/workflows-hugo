@@ -1,0 +1,34 @@
+{{ define "main" }}
+  {{ $color := "cyan" }}
+  <main role="main" class="col s12">
+    <section class="index-wrapper {{ $color }}">
+      <div class="blog white z-depth-3 hoverable">
+
+        <section class="blog-header {{ $color }} lighten-5">
+          <div class="main_title"> 
+            <h4 class="blog-post-title" itemprop="name headline">
+              <a href="#">{{ .Section }}</a></h4>
+          </div>
+        </section>
+
+        <section class="blog-index" itemprop="ItemList">
+          {{ .Content }}
+          {{ block "index" . }}{{ end }}
+        </section>
+
+      </div>
+    </section>
+  </main>
+{{ end }}
+
+{{ define "index" }}
+  {{ $posts := where .Data.Pages "Type" "post" }}
+
+  {{ range ($posts.GroupByDate "2006") }}
+    <div class="archive">
+      {{ $dict := (dict "Color" "cyan" "Key" .Key "Pages" .Pages) }}
+      {{ partial "summary/by-month.html" $dict }}
+    </div>
+  {{ end }}
+{{ end }}
+

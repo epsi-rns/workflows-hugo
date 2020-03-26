@@ -1,0 +1,52 @@
+{{ define "main" }}
+  {{ $color := "blue" }}
+  <main role="main" class="col s12">
+    <section class="main-wrapper {{ $color }}">
+      <div class="blog white z-depth-3 hoverable">
+
+        <section class="blog-header {{ $color }} lighten-5">
+          {{ partial "post/header.html" . }}
+        </section>
+
+        <article class="blog-body responsive-img" itemprop="articleBody">
+          {{- with .Page.Params.toc -}}
+            {{ partial (print . ".html") . }}
+          {{- end -}}
+
+          {{/* partial "service-google-adsense.html" . */}}
+
+          {{ .Content }}
+          {{ partial "post/navigation.html" . }}
+        </article>
+
+        <section class="blog-footer {{ $color }} lighten-5">
+          {{ partial "post/footer.html" . }}
+          {{/* partial "service-disqus-comments.html" . */}}
+        </section>
+
+      </div>
+    </section>
+  </main>
+{{ end }}
+
+{{ define "aside" }}
+{{ end }}
+
+{{ define "aside-all-widget" }}
+  <aside class="col s12 m4">
+    {{ partial "widget/friends.html" . }}
+    {{ partial "widget/related-posts.html" . }}
+
+    {{ partial "widget/categories.html" . }}
+    {{ partial "widget/archives.html" . }}
+
+    {{ partial "widget/tags.html" . }}
+    {{ partial "widget/recent-post.html" . }}
+
+    {{ partial "widget/archives-github.html" . }}
+    {{ partial "widget/archives-gitlab.html" . }}
+
+    {{ partial "widget/oto-spies.html" . }}
+    {{ partial "widget/affiliates.html" . }}
+  </aside>
+{{ end }}

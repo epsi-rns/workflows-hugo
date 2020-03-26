@@ -1,0 +1,42 @@
+    <div class="meta-item p-10 hoverable">
+
+      <strong><a class="meta_link brown-text text-darken-3" 
+        href="{{ .Permalink }}">{{ .Title }}
+      </strong></a>
+
+      <div class="meta">
+        <div class="meta_time left">
+          <i class="material-icons left">access_time</i>
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+          {{ .Date.Format "Jan 2, 2006" }}</time>
+        </div>      
+        <div class="right" id="meta_tags">
+          {{ range .Params.tags }}
+            {{ $path := . | urlize }}
+            <a href="{{ printf "tags/%s" $path | absURL }}">
+              <span class="new brown badge z-depth-1 hoverable"
+              data-badge-caption="">{{ . }}</span></a>
+          {{ end }}
+        </div>
+      </div> 
+
+      <div class="clearfix"></div>
+      
+      <div>
+        {{ if .Params.Excerpt -}}
+          {{ .Params.Excerpt }}
+        {{- else -}}
+          {{ .Summary }}
+        {{- end }}
+      </div>
+
+      <div class="">
+        <a href="{{ .Permalink }}" 
+           class="waves-effect waves-light btn-small
+                  brown hoverable m-b-5">
+             <i class="material-icons right">chevron_right</i>
+             Read More&nbsp;
+        </a>
+      </div>
+
+    </div>

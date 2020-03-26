@@ -1,0 +1,38 @@
+{{ $color := .Color }}
+{{ $key   := .Key }}
+{{ $value := .Value }}
+{{ $data  := .Data }}
+
+  <div class="col s12 m6 l4">
+    <div class="widget white z-depth-1 hoverable m-5">
+      <div class="widget-header {{ $color }} lighten-4">
+
+        <i class="material-icons left">local_offer</i>
+        {{ $data.Singular | humanize }}: 
+        <a href="{{ "/" | relLangURL }}{{ $data.Plural | urlize }}/{{ $key | urlize }}">
+        {{ $key }}</a>
+        <div class="clearfix"></div>
+
+      </div>
+      <div class="widget-body">
+
+        <div class="archive-list p-l-15 p-b-5">
+        {{ range where $value.Pages "Type" "post" }}
+        <div class="archive-item meta-item">
+          <div class="meta_link right-align">
+            <time class="meta_time right"
+                  datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+              {{ .Date.Format "Jan 02, 2006" }}
+              <i class="material-icons right">access_time</i></time></div>
+          <div class="left"><a href="{{ .URL | absURL }}">
+            {{ .Title }}
+          </a></div>
+          <div class="clearfix"></div>
+        </div>
+        {{ end }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+

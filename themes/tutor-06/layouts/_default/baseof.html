@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "site/head.html" . }}
+<body class="white grey-text text-darken-4">
+{{/* partial "service/google-analytics.html" . */}}
+{{ partial "site/header.html" . }}
+
+{{- block "general" . }}
+  <!-- inner layout -->
+  <div class="layout-inner">
+  <div class="row maxwidth">
+    {{- block "main" . }}
+    {{ .Content }}
+    {{- end }}
+
+    {{- block "aside" . }}{{- end }}
+  </div></div>
+{{- end }}
+
+{{ partial "site/footer.html" . }}
+{{ partial "site/scripts.html" . }}
+</body>
+</html>
+

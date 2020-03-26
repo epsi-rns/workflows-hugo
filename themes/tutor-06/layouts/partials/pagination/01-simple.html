@@ -1,0 +1,67 @@
+{{ $color := .c }}
+
+{{ if gt .p.TotalPages 1 }}
+  <ul class="pagination">
+    <!-- First Page. -->
+    {{ if not (eq .p.PageNumber 1) }}
+      <li class="waves-effect">
+        <a href="{{ .p.First.URL }}" rel="first"
+           class="{{ $color }}-text text-darken-2">
+          <i class="material-icons">first_page</i>
+      </a></li>
+    {{ else }}
+      <li class="disabled">
+        <a title="This is the first page">
+          <i class="material-icons">first_page</i>
+      </a></li>
+    {{ end }}
+
+    <!-- Previous Page. -->
+    {{ if .p.HasPrev }}
+      <li class="waves-effect">
+        <a href="{{ .p.Prev.URL }}" rel="prev"
+           class="{{ $color }}-text text-darken-2">
+          <i class="material-icons">chevron_left</i>
+      </a></li>
+    {{ else }}
+      <li class="disabled">
+        <a title="This is the first page">
+        <i class="material-icons">chevron_left</i>
+      </a></li>
+    {{ end }}
+
+    <!-- Indicator Number. -->
+      <li class="disabled">
+        <a class="pagination-link">
+          Page: {{ .p.PageNumber }} of {{ .p.TotalPages }}
+      </a></li>
+
+    <!-- Next Page. -->
+    {{ if .p.HasNext }}
+      <li class="waves-effect">
+        <a href="{{ .p.Next.URL }}" rel="next"
+           class="{{ $color }}-text text-darken-2">
+          <i class="material-icons">chevron_right</i>
+      </a></li>
+    {{ else }}
+      <li class="disabled">
+        <a title="This is the last page">
+          <i class="material-icons">chevron_right</i>
+      </a></li>
+    {{ end }}
+
+    <!-- Last Page. -->
+    {{ if not (eq .p.PageNumber .p.TotalPages) }}
+      <li class="waves-effect">
+        <a href="{{ .p.Last.URL }}" rel="last"
+           class="{{ $color }}-text text-darken-2">
+          <i class="material-icons">last_page</i>
+      </a></li>
+    {{ else }}
+      <li class="disabled">
+        <a title="This is the last page">
+          <i class="material-icons">last_page</i>
+      </a></li>
+    {{ end }}
+  </ul>
+{{ end }}
