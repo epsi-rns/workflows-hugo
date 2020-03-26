@@ -3,7 +3,7 @@
 {{- $postCount := len $posts -}}
 {
   {{ range $i, $e := $posts }}
-    "{{ .URL | urlize }}": {
+    "{{ .Permalink }}": {
       "title": {{ jsonify $e.Title }},
       "content": {{ jsonify ($e.Params.excerpt | default $e.Summary) }},
       "url": {{ jsonify .Permalink }},

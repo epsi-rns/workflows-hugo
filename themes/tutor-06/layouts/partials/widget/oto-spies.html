@@ -1,19 +1,20 @@
-<section class="aside-wrapper grey">
+{{ $color := "grey" }}
+
+<section class="aside-wrapper {{ $color }}">
   <div class="widget white z-depth-3 hoverable">
-    <div class="widget-header grey lighten-4">
 
+    <div class="widget-header {{ $color }} lighten-4">
       <strong>Car Painting and Body Repair</strong>
-      <i class="material-icons right">directions_car</i>
-
+      <span class="fas fa-car-side is-pulled-right"></span>
     </div>
-    <div class="widget-body">
-
+    
+    <div class="widget-body responsive-img">
       <div class="center-align">
         <a href="http://oto-spies.info/">
           <img src="{{ "images/adverts/oto-spies-01.png" | absURL }}"
                alt="Oto Spies"></a>
       </div>
-
     </div>
+
   </div>
 </section>

@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-{{ partial "site/head.html" . }}
-<body class="white grey-text text-darken-4">
-{{/* partial "service/google-analytics.html" . */}}
-{{ partial "site/header.html" . }}
 
-{{- block "general" . }}
-  <!-- inner layout -->
-  <div class="layout-inner">
-  <div class="row maxwidth">
-    {{- block "main" . }}
-    {{ .Content }}
-    {{- end }}
+<head>
+  {{ partial "site/head.html" . }}
+</head>
 
-    {{- block "aside" . }}{{- end }}
-  </div></div>
-{{- end }}
+<body>
+  {{/* partial "service/google-analytics.html" . */}}
+  {{ partial "site/header.html" . }}
 
-{{ partial "site/footer.html" . }}
-{{ partial "site/scripts.html" . }}
+  <div class="columns is-8 layout-base maxwidth">
+      {{- block "main" . }}
+      {{ .Content }}
+      {{- end }}
+
+      {{- block "aside" . }}{{- end }}
+  </div>
+
+  {{ partial "site/footer.html" . }}
+  {{ partial "site/scripts.html" . }}
+  {{ block "custom-javascript" . }}{{ end }}
 </body>
+
 </html>
 

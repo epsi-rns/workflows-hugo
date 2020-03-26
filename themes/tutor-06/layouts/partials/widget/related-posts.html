@@ -1,16 +1,17 @@
 {{ if .Params.related_link_ids }}
-<section class="aside-wrapper light-green">
+{{ $color := "light-green" }}
+
+<section class="aside-wrapper {{ $color }}">
   <div class="widget white z-depth-3 hoverable">
-    <div class="widget-header light-green lighten-4">
 
+    <div class="widget-header {{ $color }} lighten-4">
       <strong>Related Posts</strong>
-      <i class="material-icons right">link</i>
-
+      <span class="fa fa-link is-pulled-right"></span>
     </div>
-    <div class="widget-body">
-
+    
+    <div class="widget-body responsive-img">
       <ul class="widget-list">
-        {{ range $cur := .Params.related_link_ids }}
+      {{ range $cur := .Params.related_link_ids }}
         <li>   
           {{ range $.Site.Data.archives }}
 
@@ -22,8 +23,8 @@
         </li>
       {{ end }}
       </ul>
-
     </div>
+
   </div>
 </section>
 {{ end }}

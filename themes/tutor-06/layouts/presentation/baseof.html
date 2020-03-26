@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{/* Required meta tags */}}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {{/* The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags */}}
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+  {{/* Let's Fake the Generator */}}
+    <meta name="generator" content="Karimata 1.2.3 Media Engine" />
+
+  {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+
+    <title>{{ .Title | default .Site.Title }}</title>
+
+  {{/*  Stylesheet */}}
+  <link rel="stylesheet" type="text/css" 
+        href='{{ "revealjs/css/reveal.css" | relURL }}'>
+  <link rel="stylesheet" type="text/css" 
+        href='{{ "revealjs/css/theme/league.css" | relURL }}'>
+    {{ block "custom-stylesheet" . }}{{ end }}
+
+  {{/* javascript */}}
+
+  {{/* Chrome, Firefox OS and Opera */}}
+  <meta name="theme-color" content="#2980b9">
+
+  {{/* miscellanous */}}
+    <link href="{{ "favicon.ico" | relURL }}" rel="shortcut icon" type="image/x-icon" />
+    
+    {{ partial "meta/opengraph.html" . }}
+    {{ partial "meta/twitter.html" . }}
+
+  {{/* unused */}}
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+      {{ .Content }}
+    </div>
+  </div>
+  
+  <script src='{{ "revealjs/js/reveal.js" | relURL }}'></script>
+  <script>
+    Reveal.initialize();
+  </script>
+
+</body>
+</html>
+

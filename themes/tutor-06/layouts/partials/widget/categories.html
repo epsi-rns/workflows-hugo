@@ -1,23 +1,23 @@
-<section class="aside-wrapper deep-orange">
+{{ $color := "deep-orange" }}
+
+<section class="aside-wrapper {{ $color }}">
   <div class="widget white z-depth-3 hoverable">
-    <div class="widget-header deep-orange lighten-4">
 
+    <div class="widget-header {{ $color }} lighten-4">
       <strong>Categories</strong>
-      <i class="material-icons right">local_pizza</i>
-
+      <span class="fa fa-folder is-pulled-right"></span>
     </div>
-    <div class="widget-body">
-
+    
+    <div class="widget-body responsive-img">
       {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
         {{ $path := $name | urlize }}
-        <a href="{{ printf "categories/%s" $path | absURL }}">
-        <span class="new deep-orange badge z-depth-1 hoverable m-b-5"
-              data-badge-caption="{{ $name }}"></span>
-        </a>
+        <a class="tag is-small is-dark
+                  {{ $color }} z-depth-1 hoverable p-b-5"
+           href="{{ printf "categories/%s" $path | absURL }}">
+          {{ $name }}&nbsp;<span class="fa fa-folder"></span>
+        </a>&nbsp;
       {{ end }}
-
-      <div class="clearfix"></div>
-
     </div>
+
   </div>
 </section>

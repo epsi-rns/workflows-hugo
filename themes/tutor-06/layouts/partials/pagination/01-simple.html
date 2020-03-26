@@ -1,67 +1,51 @@
-{{ $color := .c }}
-
-{{ if gt .p.TotalPages 1 }}
-  <ul class="pagination">
+<nav class="pagination is-small is-centered" 
+     role="navigation" aria-label="pagination">
+  {{ if gt .p.TotalPages 1 }}
     <!-- First Page. -->
     {{ if not (eq .p.PageNumber 1) }}
-      <li class="waves-effect">
-        <a href="{{ .p.First.URL }}" rel="first"
-           class="{{ $color }}-text text-darken-2">
-          <i class="material-icons">first_page</i>
-      </a></li>
+      <a class="pagination-previous" href="{{ .p.First.URL }}" 
+         rel="first">First</a>
     {{ else }}
-      <li class="disabled">
-        <a title="This is the first page">
-          <i class="material-icons">first_page</i>
-      </a></li>
+      <a class="pagination-previous" title="This is the first page"
+         disabled>First</a>
     {{ end }}
 
     <!-- Previous Page. -->
     {{ if .p.HasPrev }}
-      <li class="waves-effect">
-        <a href="{{ .p.Prev.URL }}" rel="prev"
-           class="{{ $color }}-text text-darken-2">
-          <i class="material-icons">chevron_left</i>
-      </a></li>
+      <a class="pagination-previous" href="{{ .p.Prev.URL }}" 
+         rel="prev">Previous</a>
     {{ else }}
-      <li class="disabled">
-        <a title="This is the first page">
-        <i class="material-icons">chevron_left</i>
-      </a></li>
+      <a class="pagination-previous" title="This is the first page"
+         disabled>Previous</a>
     {{ end }}
 
     <!-- Indicator Number. -->
-      <li class="disabled">
-        <a class="pagination-link">
-          Page: {{ .p.PageNumber }} of {{ .p.TotalPages }}
-      </a></li>
+    <a class="pagination-link" 
+       disabled>Page: {{ .p.PageNumber }} of {{ .p.TotalPages }}</a>
 
     <!-- Next Page. -->
     {{ if .p.HasNext }}
-      <li class="waves-effect">
-        <a href="{{ .p.Next.URL }}" rel="next"
-           class="{{ $color }}-text text-darken-2">
-          <i class="material-icons">chevron_right</i>
-      </a></li>
+      <a class="pagination-next" href="{{ .p.Next.URL }}" 
+         rel="next">Next</a>
     {{ else }}
-      <li class="disabled">
-        <a title="This is the last page">
-          <i class="material-icons">chevron_right</i>
-      </a></li>
+      <a class="pagination-next" title="This is the last page"
+         disabled>Next</a>
     {{ end }}
 
     <!-- Last Page. -->
     {{ if not (eq .p.PageNumber .p.TotalPages) }}
-      <li class="waves-effect">
-        <a href="{{ .p.Last.URL }}" rel="last"
-           class="{{ $color }}-text text-darken-2">
-          <i class="material-icons">last_page</i>
-      </a></li>
+      <a class="pagination-next" href="{{ .p.Last.URL }}" 
+         rel="last">Last</a>
     {{ else }}
-      <li class="disabled">
-        <a title="This is the last page">
-          <i class="material-icons">last_page</i>
-      </a></li>
+      <a class="pagination-next" title="This is the last page"
+         disabled>Last</a>
     {{ end }}
-  </ul>
-{{ end }}
+
+    <!-- Dummy. Do not delete! -->
+    <ul class="pagination-list">
+    </ul>
+
+  {{ end }}
+</nav>
+
+

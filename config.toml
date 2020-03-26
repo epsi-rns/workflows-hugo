@@ -1,28 +1,17 @@
 # An example of Hugo site using Bulma for personal learning purpose.
 
-baseURL      = "/workflows-hugo"
+baseURL      = "http://example/"
 languageCode = "en-us"
 title        = "Your mission. Good Luck!"
 theme        = "tutor-06"
 
-PygmentsCodeFences = true
-PygmentsStyle      = "monokai"
+Paginate     = 2
 
 [params]
-  mainSections = ["post"]
-
   description = """\
     Embrace, extend, and extinguish: Open Source with Daily Genuine Experience.
     From Coding, Design, Package Management Tweak to Desktop Customization.
     """
-
-  opengraphimage = "images/logo-gear-opengraph.png"
-
-  keywords  = [
-    "Hugo", "SSG", "static site generator",
-    "Materialize", "CSS Framework"
-  ]
-
 [taxonomies]
   category = "categories"
   tag = "tags"

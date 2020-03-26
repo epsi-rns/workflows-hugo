@@ -1,23 +1,19 @@
-
-<div class="p-b-10">
+<nav class="pagination is-centered is-small" 
+     role="navigation" aria-label="pagination">
 
     <!-- Previous Page. -->
     {{ if .Page.PrevPage }}
-      <span class="left">
-      <a href="{{ .Page.PrevPage.URL | absURL }}"
+      <a class="pagination-previous post-previous"
+         href="{{ .Page.PrevPage.Permalink | absURL }}"
          title="{{ .Page.PrevPage.Title }}">
-        <i class="material-icons left">chevron_left</i>Previous</a>
-      </span>
+        <span class="fas fa-chevron-left"></span>&nbsp;&nbsp;</a>
     {{ end }}
 
     {{ if .Page.NextPage }}
-      <span class="right">
-      <a href="{{ .Page.NextPage.URL | absURL }}" 
-         title="{{ .Page.NextPage.Title }}">
-        <i class="material-icons right">chevron_right</i>Next</a>
-      </span>
+      <a class="pagination-next post-next"
+         href="{{ .Page.NextPage.Permalink | absURL }}" 
+         title="{{ .Page.NextPage.Title }}">&nbsp;&nbsp;
+        <span class="fas fa-chevron-right"></span></a>
     {{ end }}
-    
-    <div class="clearfix"></div>
+</nav>
 
-</div>

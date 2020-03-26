@@ -1,13 +1,14 @@
-<section class="aside-wrapper green">
+{{ $color := "green" }}
+
+<section class="aside-wrapper {{ $color }}">
   <div class="widget white z-depth-3 hoverable">
-    <div class="widget-header green lighten-4">
 
+    <div class="widget-header {{ $color }} lighten-4">
       <strong>Affiliates</strong>
-      <i class="material-icons right">face</i>
-
+      <span class="fas fa-fingerprint is-pulled-right"></span>
     </div>
-    <div class="widget-body">
-
+    
+    <div class="widget-body responsive-img">
       <ul class="widget-list">
         <li><a href="http://epsi-rns.github.io/"
               >Linux/BSD Desktop Customization</a></li>
@@ -22,8 +23,7 @@
         <li><a href="https://gitlab.com/epsi-rns/tutor-jekyll-bulma-md"
               >Jekyll: Bulma Material Design</a></li>
       </ul>
-
     </div>
+
   </div>
 </section>
-

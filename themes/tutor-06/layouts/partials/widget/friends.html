@@ -1,19 +1,20 @@
-<section class="aside-wrapper purple">
+{{ $color := "purple" }}
+
+<section class="aside-wrapper {{ $color }}">
   <div class="widget white z-depth-3 hoverable">
-    <div class="widget-header purple lighten-4">
 
-      <strong>Isle of Friends</strong>
-      <i class="material-icons right">face</i>
-
+    <div class="widget-header {{ $color }} lighten-4">
+      <strong>Isle of Dotsites</strong>
+      <span class="fas fa-child is-pulled-right"></span>
     </div>
-    <div class="widget-body">
-
+    
+    <div class="widget-body responsive-img">
       <ul class="widget-list">
         {{ range first 5 (shuffle .Site.Data.friends) }}
         <li><a href="{{ .url }}">{{ .title }}</a></li>
         {{ end }}
       </ul>
-
     </div>
+
   </div>
 </section>

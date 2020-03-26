@@ -1,71 +1,71 @@
-{{/* 
-
-Pagination links 
-* https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/
-
-*/}}
-
-{{ if gt .p.TotalPages 1 }}
-  {{ $color := .c }}
+<nav class="pagination is-small is-centered" 
+     role="navigation" aria-label="pagination">
   {{ $s := .s }}
   {{ $p := .p }}
+  {{ $color := .c }}
 
-  <!-- Page numbers. -->
-  {{- $pagenumber := $p.PageNumber -}}
+  {{ if gt .p.TotalPages 1 }}
+    <ul class="pagination-list">
 
-  <!-- Number of links either side of the current page. -->
-  {{ $adjacent_links := 2 }}
+    <!-- Page numbers. -->
+    {{- $pagenumber := $p.PageNumber -}}
 
-  <!-- $max_links = ($adjacent_links * 2) + 1 -->
-  {{ $max_links := (add (mul $adjacent_links 2) 1) }}
+    <!-- Number of links either side of the current page. -->
+    {{ $adjacent_links := 2 }}
 
-  <!-- $lower_limit = 1 + $adjacent_links -->
-  {{ $lower_limit := (add 1 $adjacent_links) }}
+    <!-- $max_links = ($adjacent_links * 2) + 1 -->
+    {{ $max_links := (add (mul $adjacent_links 2) 1) }}
 
-  <!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
-  {{ $upper_limit := (sub $p.TotalPages $adjacent_links) }}
+    <!-- $lower_limit = 1 + $adjacent_links -->
+    {{ $lower_limit := (add 1 $adjacent_links) }}
 
-  <ul class="pagination">
-    <!-- First Page. -->
-    {{ if not (eq .p.PageNumber 1) }}
-      <li class="stop-icon-first waves-effect">
-        <a href="{{ .p.First.URL }}" rel="first"
-           class="{{ $color }}-text text-darken-2">
-          <i class="material-icons">first_page</i>
-      </a></li>
-    {{ else }}
-      <li class="stop-icon-first disabled">
-        <a title="This is the first page">
-          <i class="material-icons">first_page</i>
-      </a></li>
-    {{ end }}
+    <!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
+    {{ $upper_limit := (sub $p.TotalPages $adjacent_links) }}
 
-    <!-- Previous Page. -->
-    {{ if .p.HasPrev }}
-      <li class="waves-effect">
-        <a href="{{ .p.Prev.URL }}" rel="prev"
-           class="{{ $color }}-text text-darken-2">
-          <i class="material-icons">chevron_left</i>
-      </a></li>
-    {{ else }}
-      <li class="disabled">
-        <a title="This is the first page">
-        <i class="material-icons">chevron_left</i>
-      </a></li>
-    {{ end }}
+      <!-- First Page. -->
+      <li class="icon-first">
+      {{ if not (eq $p.PageNumber 1) }}
+        <a class="pagination-previous hoverable"
+           href="{{ $p.First.URL }}"
+           rel="first">
+          <span class="fas fa-step-backward"></span>&nbsp;</a>
+      {{ else }}
+        <a class="pagination-previous"
+           title="This is the first page"
+           disabled>
+          <span class="fas fa-step-backward"></span>&nbsp;</a>
+      {{ end }}
+      </li>
+
+      <!-- Previous Page. -->
+      <li class="icon-previous">
+      {{ if .p.HasPrev }}
+        <a class="pagination-previous hoverable"
+           href="{{ $p.Prev.URL }}" 
+           rel="prev">
+          <span class="fas fa-backward"></span>&nbsp;</a>
+      {{ else }}
+        <a class="pagination-previous"
+           title="This is the first page"
+           disabled>
+          <span class="fas fa-backward"></span>&nbsp;</a>
+      {{ end }}
+      </li>
 
     {{ if gt $p.TotalPages $max_links }}
       <!-- First Page. -->
       {{ if gt (sub $p.PageNumber $adjacent_links) 1 }}
-      <li class="first waves-effect">
-        <a href="{{ $p.First.URL }}"
+      <li class="first">
+        <a href="{{ $p.First.URL }}" class="pagination-link" 
            aria-label="Goto page 1">1</a>
       </li>
       {{ end }}
 
       <!-- Early (More Pages) Indicator. -->
       {{ if gt (sub $p.PageNumber $adjacent_links) 2 }}
-      <li class="pages-indicator disabled">&hellip;</li>
+      <li class="pages-indicator first">
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
       {{ end }}
     {{ end }}
 
@@ -109,7 +109,7 @@ Pagination links
       {{ end }}
 
       {{- if eq ($s.Get "page_number_flag") true -}}
-        <!-- Calculate Offset Class. -->
+      <!-- Calculate Offset Class. -->
         {{ $s.Set "page_offset" (sub .PageNumber $p.PageNumber) }}
 
         {{ $s.Set "page_offset_class" "" }}
@@ -119,67 +119,69 @@ Pagination links
           {{ $s.Set "page_offset_class" (print "pagination--offset" ($s.Get "page_offset") ) }}
         {{- end -}}
 
-        <!-- Show Pager. -->
+      <!-- Show Pager. -->
+      <li class="{{ $s.Get "page_offset_class" }}">
         {{ if not (eq $pagenumber .PageNumber) }} 
-        <li class="waves-effect {{ $s.Get "page_offset_class" }}">
-          <a href="{{ .URL }}"
-             aria-label="Goto page {{ .PageNumber }}"
-             class="{{ $color }}-text text-darken-2">
-            {{ .PageNumber }}
-          </a>
-        </li>
+        <a href="{{ .URL }}" class="pagination-link" 
+           aria-label="Goto page {{ .PageNumber }}">
+          {{ .PageNumber }}
+        </a>
         {{ else }}
-        <li class="active {{ $color }}">
-          <a aria-label="Page {{ .PageNumber }}">
-            {{ .PageNumber }}
-          </a>
-        </li>
+        <a class="pagination-link is-current {{ $color }}" 
+           aria-label="Page {{ .PageNumber }}">
+          {{ .PageNumber }}
+        </a>
         {{ end }}
+      </li>
       {{- end -}}
     {{ end }}
 
     {{ if gt $p.TotalPages $max_links }}
       <!-- Late (More Pages) Indicator. -->
       {{ if lt (add $p.PageNumber $adjacent_links) (sub $p.TotalPages 1) }}
-      <li class="pages-indicator disabled">&hellip;</li>
+      <li class="pages-indicator last">
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
       {{ end }}
 
       <!-- Last Page. -->
       {{ if lt (add $p.PageNumber $adjacent_links) $p.TotalPages }}
-      <li class="last waves-effect">
-        <a href="{{ $p.Last.URL }}"
-           aria-label="Goto page {{ $p.TotalPages }}"
-          >{{ $p.TotalPages }}</a>
+      <li class="last">
+        <a href="{{ $p.Last.URL }}" class="pagination-link" 
+           aria-label="Goto page {{ $p.TotalPages }}">{{ $p.TotalPages }}</a>
       </li>
       {{ end }}
     {{ end }}
 
-    <!-- Next Page. -->
-    {{ if .p.HasNext }}
-      <li class="waves-effect">
-        <a href="{{ .p.Next.URL }}" rel="next"
-           class="{{ $color }}-text text-darken-2">
-          <i class="material-icons">chevron_right</i>
-      </a></li>
-    {{ else }}
-      <li class="disabled">
-        <a title="This is the last page">
-          <i class="material-icons">chevron_right</i>
-      </a></li>
-    {{ end }}
+      <!-- Next Page. -->
+      <li class="icon-next">
+      {{ if .p.HasNext }}
+        <a class="pagination-next hoverable"
+           href="{{ $p.Next.URL }}"
+           rel="next">&nbsp;
+          <span class="fas fa-forward"></span></a>
+      {{ else }}
+        <a class="pagination-next"
+           title="This is the last page"
+           disabled>&nbsp;
+          <span class="fas fa-forward"></span></a>
+      {{ end }}
+      </li>
 
-    <!-- Last Page. -->
-    {{ if not (eq .p.PageNumber .p.TotalPages) }}
-      <li class="stop-icon-last waves-effect">
-        <a href="{{ .p.Last.URL }}" rel="last"
-           class="{{ $color }}-text text-darken-2">
-          <i class="material-icons">last_page</i>
-      </a></li>
-    {{ else }}
-      <li class="stop-icon-last disabled">
-        <a title="This is the last page">
-          <i class="material-icons">last_page</i>
-      </a></li>
-    {{ end }}
-  </ul>
-{{ end }}
+      <!-- Last Page. -->
+      <li class="icon-last">
+      {{ if not (eq $p.PageNumber $p.TotalPages) }}
+        <a class="pagination-next hoverable"
+           href="{{ $p.Last.URL }}"
+           rel="last">&nbsp;
+          <span class="fas fa-step-forward"></span></a>
+      {{ else }}
+        <a class="pagination-next"
+           title="This is the last page"
+           disabled>&nbsp;
+          <span class="fas fa-step-forward"></span></a>
+      {{ end }}
+      </li>
+    </ul>
+  {{ end }}
+</nav>

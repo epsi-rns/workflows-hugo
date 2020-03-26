@@ -1,10 +1,10 @@
-# Hugo Materialize Test Drive on CircleCIU
+# Hugo Bulma MD Test Drive with Github Workflows
 
-An example of Hugo site using Materialize for personal learning purpose.
+An example of Hugo site using Bulma Material Design for personal learning purpose.
 
-This is basically a Materialize version of Hugo Tutorial.
+> Hugo (Chroma) + Bulma (Material Design)
 
-![Hugo Materialize: Preview][hugo-materialize-preview]
+![Hugo Bulma MD: Tutor][hugo-bulma-md-preview]
 
 Please refer to original tutorial:
 
@@ -14,5 +14,6 @@ Please refer to original tutorial:
 
 What do you think ?
 
-[tutorial-hugo]:            https://gitlab.com/epsi-rns/tutor-hugo-materialize/
-[hugo-materialize-preview]: https://gitlab.com/epsi-rns/tutor-hugo-materialize/raw/master/hugo-materialize-preview.png
+[tutorial-hugo]:            https://gitlab.com/epsi-rns/tutor-hugo-bulma-md/
+[hugo-bulma-md-preview]:    https://gitlab.com/epsi-rns/tutor-hugo-bulma-md/raw/master/hugo-bulma-md-preview.png
+

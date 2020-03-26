@@ -1,13 +1,14 @@
-<section class="aside-wrapper green">
+{{ $color := "green" }}
+
+<section class="aside-wrapper {{ $color }}">
   <div class="widget white z-depth-3 hoverable">
-    <div class="widget-header green lighten-4">
 
+    <div class="widget-header {{ $color }} lighten-4">
       <strong>Archives</strong>
-      <i class="material-icons right">next_week</i>
-
+      <span class="fa fa-archive is-pulled-right"></span>
     </div>
-    <div class="widget-body">
-
+    
+    <div class="widget-body responsive-img">
       {{ $posts := where .Site.Pages "Type" "post" }}
       {{ $page_year   := .Page.Date.Format "2006" }}
       {{ $page_month  := .Page.Date.Format "January" }}
@@ -34,7 +35,7 @@
               {{ range $post_month := .Pages }}
 
               <li>
-                <a href="{{ $post_month.URL | absURL }}">
+                <a href="{{ $post_month.Permalink | absURL }}">
                   {{ $post_month.Title }}
                 </a>
               </li>
@@ -48,7 +49,7 @@
         {{ end }}
 
       {{ end }}
-
     </div>
+
   </div>
 </section>

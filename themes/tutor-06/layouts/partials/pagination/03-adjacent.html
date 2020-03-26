@@ -4,28 +4,29 @@ Pagination links
 * https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/
 
 */}}
-
-{{ if gt .p.TotalPages 1 }}
-  {{ $color := .c }}
+<nav class="pagination is-small is-centered"
+     role="navigation" aria-label="pagination">
   {{ $s := .s }}
   {{ $p := .p }}
+  {{ $color := .c }}
 
-  <!-- Page numbers. -->
-  {{- $pagenumber := $p.PageNumber -}}
+  {{ if gt .p.TotalPages 1 }}
+    <ul class="pagination-list">
 
-  <!-- Number of links either side of the current page. -->
-  {{ $adjacent_links := 2 }}
+    <!-- Page numbers. -->
+    {{- $pagenumber := $p.PageNumber -}}
 
-  <!-- $max_links = ($adjacent_links * 2) + 1 -->
-  {{ $max_links := (add (mul $adjacent_links 2) 1) }}
+    <!-- Number of links either side of the current page. -->
+    {{ $adjacent_links := 2 }}
 
-  <!-- $lower_limit = 1 + $adjacent_links -->
-  {{ $lower_limit := (add 1 $adjacent_links) }}
+    <!-- $max_links = ($adjacent_links * 2) + 1 -->
+    {{ $max_links := (add (mul $adjacent_links 2) 1) }}
 
-  <!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
-  {{ $upper_limit := (sub $p.TotalPages $adjacent_links) }}
+    <!-- $lower_limit = 1 + $adjacent_links -->
+    {{ $lower_limit := (add 1 $adjacent_links) }}
 
-  <ul class="pagination">
+    <!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
+    {{ $upper_limit := (sub $p.TotalPages $adjacent_links) }}
 
     {{- range $p.Pagers -}}
       {{ $s.Set "page_number_flag" false }}
@@ -68,23 +69,22 @@ Pagination links
 
       <!-- Show Pager. -->
       {{- if eq ($s.Get "page_number_flag") true -}}
+      <li>
         {{ if not (eq $pagenumber .PageNumber) }} 
-        <li class="waves-effect">
-          <a href="{{ .URL }}"
-             aria-label="Goto page {{ .PageNumber }}"
-             class="{{ $color }}-text text-darken-2">
-            {{ .PageNumber }}
-          </a>
-        </li>
+        <a href="{{ .URL }}" class="pagination-link" 
+           aria-label="Goto page {{ .PageNumber }}">
+          {{ .PageNumber }}
+        </a>
         {{ else }}
-        <li class="active {{ $color }}">
-          <a aria-label="Page {{ .PageNumber }}">
-            {{ .PageNumber }}
-          </a>
-        </li>
+        <a class="pagination-link is-current {{ $color }}" 
+           aria-label="Page {{ .PageNumber }}">
+          {{ .PageNumber }}
+        </a>
         {{ end }}
+      </li>
       {{- end -}}
     {{ end }}
 
-  </ul>
-{{ end }}
+    </ul>
+  {{ end }}
+</nav>

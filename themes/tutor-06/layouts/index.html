@@ -1,14 +1,26 @@
 {{ define "main" }}
-{{ $color := "blue-grey" }}
-  <main role="main" class="col s12 m12">
-    <section class="main-wrapper {{ $color }}">
+  <main role="main" 
+        class="column is-full">
+
+    <section class="main-wrapper blue-grey">
       <div class="blog white z-depth-3 hoverable">
 
-        <article class="blog-body" itemprop="articleBody">
+        <section class="blog-header has-text-centered
+                        blue-grey lighten-5">
+          <div class="main_title"> 
+            <h4 class="title is-4"
+                itemprop="name headline">
+              {{ .Title | default .Site.Title }}</h4>
+          </div>
+        </section>
+
+        <article class="blog-body has-text-centered"
+                 itemprop="articleBody">
           {{ .Content }}
         </article>
 
       </div>
     </section>
+
   </main>
 {{ end }}

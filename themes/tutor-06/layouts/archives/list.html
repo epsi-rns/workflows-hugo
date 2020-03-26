@@ -1,37 +1,39 @@
 {{ define "main" }}
   {{ $color := "brown" }}
-  <main role="main" class="col s12">
-    <section class="index-wrapper {{ $color }}">
+  <main role="main" 
+        class="column is-full">
+
+    <section class="main-wrapper {{ $color }}">
       <div class="blog white z-depth-3 hoverable">
 
         <section class="blog-header {{ $color }} lighten-5">
-          <div class="main_title"> 
-            <h4 class="blog-post-title" itemprop="name headline">
-              <a href="#">{{ .Title | default .Site.Title }}</a></h4>
-          </div>
+          {{ partial "page/blog-header.html" . }}
         </section>
 
-        <section class="center-align" itemprop="pagination">
+        <article class="blog-body" itemprop="articleBody">
+
           {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
           {{ $dict := (dict "p" $paginator "c" $color  "s" .Scratch) }}
-          {{ partial "pagination/05-responsive.html" $dict }}
-        </section>
+          {{ partial "pagination/06-screenreader.html" $dict }}
 
-        <section class="blog-index" itemprop="ItemList">
           {{ .Content }}
-
-          <div class="post-list">
-          {{ range $paginator.Pages }}
-            <div class="archive p-b-10">
-              {{ partial "summary/blog-list.html" . }}
-            </div>
-          {{ end }}
-          </div>
-        </section>
+          {{ block "index" $dict }}{{ end }}
+        </article>
 
       </div>
     </section>
+
   </main>
+{{ end }}
+
+{{ define "index" }}
+  <div class="post-list">
+  {{ range .p.Pages }}
+    <div class="archive p-b-10">
+      {{ partial "index/blog-list.html" . }}
+    </div>
+  {{ end }}
+  </div>
 {{ end }}
 
 {{ define "pagination-steps" }}
@@ -46,5 +48,6 @@
   {{ partial "pagination/03-adjacent.html" $dict}}
   {{ partial "pagination/04-indicator.html" $dict }}
   {{ partial "pagination/05-responsive.html" $dict }}
+  {{ partial "pagination/06-screenreader.html" $dict }}
 */}}
 {{ end }}

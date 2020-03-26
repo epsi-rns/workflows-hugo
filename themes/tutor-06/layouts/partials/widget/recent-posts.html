@@ -1,0 +1,20 @@
+{{ $color := "lime" }}
+
+<section class="aside-wrapper {{ $color }}">
+  <div class="widget white z-depth-3 hoverable">
+
+    <div class="widget-header {{ $color }} lighten-4">
+      <strong>Recent Posts</strong>
+      <span class="fa fa-newspaper is-pulled-right"></span>
+    </div>
+    
+    <div class="widget-body responsive-img">
+      <ul class="widget-list">
+        {{ range first 5 (where .Site.Pages "Type" "post") }}
+        <li><a href="{{ .Permalink | absURL }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+
+  </div>
+</section>

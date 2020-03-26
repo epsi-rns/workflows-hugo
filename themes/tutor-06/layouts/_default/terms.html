@@ -1,52 +1,25 @@
 {{ define "main" }}
-  {{ $color := "blue" }}
-  <main role="main" class="col s12">
-    <section class="index-wrapper {{ $color }}">
+  {{ $color := "light-blue" }}
+  <main role="main" 
+        class="column is-full">
+
+    <section class="main-wrapper {{ $color }}">
       <div class="blog white z-depth-3 hoverable">
 
         <section class="blog-header {{ $color }} lighten-5">
-          <div class="main_title"> 
-            <h4 class="blog-post-title" itemprop="name headline">
-              <a href="#">{{ .Section }}</a></h4>
-          </div>
+          {{ partial "page/section-header.html" . }}
         </section>
 
-        <section class="blog-index" itemprop="ItemList">
-          {{ .Content }}
-          {{ block "index-header" . }}{{ end }}
-          {{ block "index-body" . }}{{ end }}
-        </section>
+        <article class="blog-body" itemprop="articleBody">
+         {{ .Content }}
+         
+         {{ $dict := (dict "Color" $color "Data" $.Data) }}
+         {{ partial "index/terms-badge.html" $dict }}
+         {{ partial "index/terms-box.html" $dict }}
+        </article>
 
       </div>
     </section>
+
   </main>
-{{ end }}
-
-{{ define "index-header" }}
-  {{ $color := "blue" }}
-
-  {{ range $key, $value := .Data.Terms }}
-    {{ $posts := where $value.Pages "Type" "post" }}
-    {{ $postCount := len $posts -}}
-
-    {{ if $postCount }}
-      <a href="{{ "/" | relLangURL }}{{ $.Data.Plural | urlize }}/{{ $key | urlize }}">
-        <span class="new {{ $color }} darken-4 badge z-depth-1 hoverable m-b-5" 
-              data-badge-caption="{{ $key }}"><strong>{{ $postCount }}</strong></span>
-      </a>
-    {{ end }}
-  {{- end }}
-
-  <div class="clearfix"></div>
-{{ end }}
-
-{{ define "index-body" }}
-  {{ $color := "blue" }}
-  
-  <div class="row">
-    {{ range $key, $value := .Data.Terms }}
-      {{ $dict := (dict "Color" $color "Key" $key "Value" $value "Data" $.Data) }}
-      {{ partial "summary/term-list.html" $dict }}
-    {{ end }}
-  </div>
 {{ end }}

@@ -1,72 +1,72 @@
-  <!-- Dropdown Structure -->
-  <ul id="archives-dropdown"
-      class="dropdown-content grey lighten-3">
-    <li><a class="grey-text text-darken-4"
-           href="{{ "tags" | absURL }}">
-        <i class="material-icons">label</i>
-        Tags</a></li>
-    <li><a class="grey-text text-darken-4"
-           href="{{ "categories" | absURL }}">
-        <i class="material-icons">folder</i>
-        Categories</a></li>
-    <li class="divider grey-text text-darken-4"></li>
-    <li><a class="grey-text text-darken-4"
-           href="{{ "pages/archives" | absURL }}">
-        <i class="material-icons">history</i>
-        Chronology</a></li>
-  </ul>
 
-  <!-- Burger Menu Structure -->
-  <ul class="sidenav grey lighten-3" id="mobile-demo">
-        <li><a class="grey-text text-darken-4"
-                href="{{ "pages" | absURL }}">
-            <i class="material-icons left">home</i>
-            Blog</a></li>
-        <!-- Dropdown Trigger -->
-        <li><a class="dropdown-trigger grey-text text-darken-4"
-               href="#!" 
-               data-target="archives-dropdown">
-               <i class="material-icons left">archive</i>
-               Archives
-               <i class="material-icons right">arrow_drop_down</i>
-             </a></li>
-        <li><a class="grey-text text-darken-4"
-               href="{{ "pages/about" | absURL }}">
-            <i class="material-icons left">face</i>
-            About</a></li>
-  </ul>
-
-  <!-- header -->
-  <nav class="maxwidth white hoverable">
-    <div class="nav-wrapper">
-      <a class="brand-logo left grey-text text-lighten-3"
+  <nav role="navigation" aria-label="main navigation"
+       class="navbar is-fixed-top is-white maxwidth
+              white z-depth-3 hoverable"
+       id="navbar-vue-app">
+    <div class="navbar-brand">
+      <a class="navbar-item"
          href="{{ .Site.BaseURL }}">
-        <img src="{{ "images/logo-gear.png" | absURL }}"
+        <img src="{{ "images/logo-gear.png" | absURL }}" 
            alt="Home" />
       </a>
-      <a class="sidenav-trigger right grey-text text-darken-4"
-         href="#"
-         data-target="mobile-demo">
-        <i class="material-icons">menu</i>
+      <a class="navbar-item"
+         href="{{ "pages" | absURL }}">
+        Blog
       </a>
-      <ul id="nav-mobile" class="right">
-        <li><a class="grey-text text-darken-4"
-               href="{{ "pages" | absURL }}">
-            <i class="material-icons left">home</i>
-            Blog</a></li>
-        <!-- Dropdown Trigger -->
-        <li><a class="dropdown-trigger grey-text text-darken-4"
-               href="#!" 
-               data-target="archives-dropdown">
-               <i class="material-icons left">archive</i>
-               Archives
-               <i class="material-icons right">arrow_drop_down</i>
-             </a></li>
-        <li class="hide-on-small-only">
-            <a class="grey-text text-darken-4"
-               href="{{ "pages/about" | absURL }}">
-               <i class="material-icons left">face</i>
-               About</a></li>
-      </ul>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Archives
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item"
+             href="{{ "tags" | absURL }}">
+            <span class="fa fa-tags"></span>
+            &nbsp;By Tags
+          </a>
+          <a class="navbar-item"
+             href="{{ "categories" | absURL }}">
+            <span class="fa fa-folder"></span>
+            &nbsp;By Category
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item"
+             href="{{ "pages/archives" | absURL }}">
+            <span class="fa fa-calendar"></span>
+            &nbsp;Chronology
+          </a>
+        </div>
+      </div>
+
+      <a role="button" class="navbar-burger burger" 
+         aria-label="menu" aria-expanded="false" data-target="navbarBulma"
+         @click="isOpen = !isOpen" v-bind:class="{'is-active': isOpen}">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBulma" class="navbar-menu"
+         v-bind:class="{'is-active': isOpen}">
+      <div class="navbar-start">
+        <a class="navbar-item"
+           href="{{ "pages/about" | absURL }}">
+          About
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <form class="is-marginless" action="/pages/search/" method="get">
+        <div class="navbar-item">
+          <input class="" type="text" name="q"
+            placeholder="Search..." aria-label="Search">
+          &nbsp;
+          <button class="button is-light" 
+            type="submit">Search</button>
+        </div>
+        </form>
+      </div>
+
     </div>
   </nav>

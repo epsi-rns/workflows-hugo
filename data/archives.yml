@@ -2,63 +2,71 @@
 # Archives by Date
 
 
+- id: 20022335
+  title: "5FDP - Wash It All The Way"
+  url: http://localhost:1313/lyrics/2020/02/23/5fdp-wash-it-all-the-way/
+  
 - id: 19071535
   title: "White Zombie - More Human Than Human"
-  url: /lyrics/white-zombie-more-human-than-human/
+  url: http://localhost:1313/lyrics/2019/07/15/white-zombie-more-human-than-human/
   
 - id: 18091335
   title: "Disturbed - Stupify"
-  url: /lyrics/disturbed-stupify/
+  url: http://localhost:1313/lyrics/2018/09/13/disturbed-stupify/
   
 - id: 18090735
   title: "Soulfly - Jump Da Fuck Up"
-  url: /lyrics/soulfly-jump-da-fuck-up/
+  url: http://localhost:1313/lyrics/2018/09/07/soulfly-jump-da-fuck-up/
   
 - id: 18021535
   title: "RATM - Bulls on Parade"
-  url: /lyrics/ratm-bulls-on-parade/
+  url: http://localhost:1313/lyrics/2018/02/15/ratm-bulls-on-parade/
   
 - id: 18011535
   title: "House of Pain - Jump Around"
-  url: /lyrics/house-of-pain-jump-around/
+  url: http://localhost:1313/lyrics/2018/01/15/house-of-pain-jump-around/
   
 - id: 15100308
   title: "Every Day"
-  url: /quotes/2015/10/03/every-day/
+  url: http://localhost:1313/quotes/2015/10/03/every-day/
   
 - id: 15072535
   title: "Marilyn Manson - Redeemer"
-  url: /lyrics/marilyn-manson-redeemer/
+  url: http://localhost:1313/lyrics/2015/07/25/marilyn-manson-redeemer/
   
 - id: 15071535
   title: "Marilyn Manson - Sweet Dreams"
-  url: /lyrics/eurythmics-sweat-dreams/
+  url: http://localhost:1313/lyrics/2015/07/15/eurythmics-sweat-dreams/
   
 - id: 15051535
   title: "Onyx - Slam"
-  url: /lyrics/onyx-slam/
+  url: http://localhost:1313/lyrics/2015/05/15/onyx-slam/
   
 - id: 15032535
   title: "Deftones - Be Quiet and Drive"
-  url: /lyrics/deftones-be-quiet-and-drive/
+  url: http://localhost:1313/lyrics/2015/03/25/deftones-be-quiet-and-drive/
   
 - id: 15010135
   title: "Jerry Maguire"
-  url: /quotes/2015/01/01/jerry-maguire/
+  url: http://localhost:1313/quotes/2015/01/01/jerry-maguire/
   
 - id: 15010135
   title: "Scott Pilgrim vs The World"
-  url: /quotes/2015/01/01/scott-pigrim-vs-the-world/
+  url: http://localhost:1313/quotes/2015/01/01/scott-pigrim-vs-the-world/
   
 - id: 15010108
   title: "Fight Club"
-  url: /quotes/2015/01/01/fight-club/
+  url: http://localhost:1313/quotes/2015/01/01/fight-club/
+  
+- id: 15010108
+  title: "Dead Poet Society"
+  url: http://localhost:1313/quotes/2015/01/01/dead-poets-society/
   
 - id: 14031535
   title: "Soundgarden - Black Hole Sun"
-  url: /lyrics/soundgarden-black-hole-sun/
+  url: http://localhost:1313/lyrics/2014/03/15/soundgarden-black-hole-sun/
   
 - id: 14011535
   title: "Public Enemy - Bring The Noise"
-  url: /lyrics/public-enemy-bring-the-noise/
+  url: http://localhost:1313/lyrics/2014/01/15/public-enemy-bring-the-noise/
   
